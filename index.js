@@ -17,15 +17,17 @@ function addToCart(item) {
 
 function viewCart() {
   if (cart.length === 0) {
-    console.log("Your shopping cart is empty.")
+    return "Your shopping cart is empty."
+  } else if (cart.length === 1) {
+    return `In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}.`
+  } else if (cart.length === 2) {
+    return `In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}, and ${cart[1].itemName} at $${cart[1].itemPrice}.`
   } else {
-    var items = [];
-    for (var i = 0; i < cart.length; i++) {
-      for (var item in cart[i]) {
-        items.push(item + " at $" + cart[i][item])
-      }
+    var myString = "In your cart, you have "
+    for(var i = 0; i < cart.length - 1; i++) {
+      myString = myString + `${cart[i].itemName} at $${cart[i].itemPrice}, `
     }
-    console.log(`In your cart, you have` + items.join(", ") + `.`);
+    return myString + `and ${cart[cart.length - 1].itemName} at $${cart[cart.length - 1].itemPrice}.`
   }
 }
 function total() {
