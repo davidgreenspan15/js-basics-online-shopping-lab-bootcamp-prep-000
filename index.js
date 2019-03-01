@@ -39,19 +39,18 @@ function total(t) {
 }
 
 function removeFromCart(item) {
-  var itemInCart = false
-  for(var i = 0; i < cart.length; i++){
-    if (cart[i].hasOwnProperty(item)) {
-      itemInCart = true;
-      cart.splice(i, 1);
+  for (var i = 0; i < cart.length; i++){
+    if (item === cart[i].itemName) {
+      cart.splice(i, 1)
+      return cart
     }
   }
-  if (!itemInCart) {
-    console.log("That item is not in your cart.");
-  }
-  return cart
-}
 
+  if (item != cart[item]) {
+    return "That item is not in your cart."
+  }
+
+}
 function placeOrder(cardNumber) { {
   if (!creditNumber) {
     console.log("We don't have a credit card on file for you to place your order.");
