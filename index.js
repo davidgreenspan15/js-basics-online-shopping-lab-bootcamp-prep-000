@@ -32,7 +32,7 @@ function viewCart() {
 }
 function total(total) {
  total = 0;
- var itemPrice = Math.floor(Math.random()*100) 
+ itemPrice = Math.floor(Math.random()*100) 
   for(var i = 0; i < cart.length; i++) { total= 
     total + cart[i].itemPrice
   }
