@@ -30,13 +30,31 @@ function viewCart() {
     return myString + `and ${cart[cart.length - 1].itemName} at $${cart[cart.length - 1].itemPrice}.`
   }
 }
-function total(total,itemPrice) {
- total = 0;
- itemPrice = Math.floor(Math.random()*100) 
-  for(var i = 0; i < cart.length; i++) { total= 
-    total + cart[i].itemPrice
+function total(total) {
+ var pricePerItemInCart = [];
+  var totalPrice = 0
+  
+  for(var i = 0; i < cart.length; i++) {
+  var itemPrice = cart[i][Object.keys(cart[i])]
+    pricePerItemInCart.push(itemPrice)
+    }
+  
+  for (var j =0; j<pricePerItemInCart.length; j++) {
+    totalPrice = pricePerItemInCart[j]+=totalPrice
   }
-  return total
+  return totalPrice
+}
+total(cart)
+
+function removeFromCart(item) {
+  for (var i = 0; i <cart.length; i++) {
+    if (cart[i].hasOwnProperty(item)) {
+      cart.splice(i, 1)
+      return cart
+    } 
+  }
+  console.log('That item is not in your cart.')
+  return cart
 }
 
 function removeFromCart(item) {
