@@ -32,7 +32,7 @@ function viewCart() {
 }
 function total(total) {
   var pricePerItemInCart = [];
-  var totalPrice = 0
+  total = 0
   
   for(var i = 0; i < cart.length; i++) {
   var itemPrice = cart[i][Object.keys(cart[i])]
@@ -42,7 +42,7 @@ function total(total) {
   for (var j =0; j<pricePerItemInCart.length; j++) {
     totalPrice = pricePerItemInCart[j]+=totalPrice
   }
-  return totalPrice
+  return total
 }
 
 function removeFromCart(item) {
