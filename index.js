@@ -31,9 +31,9 @@ function viewCart() {
   }
 }
 function total(total) {
-  total = 0;
+ total = 0;
   for(var i = 0; i < cart.length; i++) {
-    total += cart[i].itemPrice
+    total + cart[i].itemPrice
   }
   return total
 }
