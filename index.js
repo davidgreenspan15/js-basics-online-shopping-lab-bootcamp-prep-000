@@ -33,10 +33,10 @@ function viewCart() {
 function total(total) {
  total = 0;
   
-  for(var i = 0; i < cart.length; i++) { total= 
+  for(var i = 0; i < cart.length; i++) {var newTotal= 
     total += cart[i].itemPrice;
   }
-  return total;
+  return newTotal;
 }
 function removeFromCart(item) {
   for (var i = 0; i <cart.length; i++) {
