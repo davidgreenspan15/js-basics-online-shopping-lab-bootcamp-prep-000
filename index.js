@@ -29,7 +29,8 @@ function viewCart() {
         items.push(item + " at $" + cart[i][item])
       }
 }
-
+}
+}
 function total() {
   // write your code here
 }
