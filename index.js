@@ -44,7 +44,6 @@ function total(total) {
   }
   return totalPrice
 }
-total(cart)
 
 function removeFromCart(item) {
   for (var i = 0; i <cart.length; i++) {
