@@ -32,15 +32,7 @@ function viewCart() {
   }
 }
 function total() {
- function total() {
-  let t = 0	  let t = 0
-
-
- @@ -15,3 +58,12 @@ function total() {
-
-
-   return t	  return t
-}	}
+  // write your code here
 }
 
 function removeFromCart(item) {
