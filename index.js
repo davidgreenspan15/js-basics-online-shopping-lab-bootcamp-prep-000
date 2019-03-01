@@ -30,7 +30,7 @@ function viewCart() {
     return myString + `and ${cart[cart.length - 1].itemName} at $${cart[cart.length - 1].itemPrice}.`
   }
 }
-function total() {
+function total(t) {
   t = 0;
   for(var i = 0; i < cart.length; i++) {
     t += cart[i].itemPrice
