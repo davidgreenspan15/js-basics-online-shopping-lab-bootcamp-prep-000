@@ -40,7 +40,7 @@ function total(total) {
     }
   
   for (var j =0; j<pricePerItemInCart.length; j++) {
-    total = pricePerItemInCart[j]+=total
+    total = pricePerItemInCart[j]+ total
   }
   return total
 }
