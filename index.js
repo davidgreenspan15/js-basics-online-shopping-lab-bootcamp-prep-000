@@ -31,30 +31,13 @@ function viewCart() {
   }
 }
 function total(total) {
-  var pricePerItemInCart = [];
-  total = 0
-  
+ total = 0;
   for(var i = 0; i < cart.length; i++) {
-  var itemPrice = cart[i][Object.keys(cart[i])]
-    pricePerItemInCart.push(itemPrice)
-    }
-  
-  for (var j =0; j<pricePerItemInCart.length; j++) {
-    total = pricePerItemInCart[j]+ total
+    total + cart[i].itemPrice
   }
   return total
 }
 
-function removeFromCart(item) {
-  for (var i = 0; i <cart.length; i++) {
-    if (cart[i].hasOwnProperty(item)) {
-      cart.splice(i, 1)
-      return cart
-    } 
-  }
-  console.log('That item is not in your cart.')
-  return cart
-}
 function removeFromCart(item) {
   for (var i = 0; i < cart.length; i++){
     if (item === cart[i].itemName) {
