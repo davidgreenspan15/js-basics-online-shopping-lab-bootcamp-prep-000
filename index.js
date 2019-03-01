@@ -9,12 +9,12 @@ function setCart(c) {
   return cart;
 }
 
-function addToCart(item,price) {
+function addToCart(item) {
 var price = Math.floor(Math.random() * 100) + 1;
   var itemObject = {}
   itemObject [item] = price
   cart.push(itemObject)
-  console.log(item + " has been added to your cart.")
+  console.log(item + ` has been added to your cart.`)
   return cart
 }
 
@@ -28,7 +28,7 @@ function viewCart() {
         items.push(item + " at $" + cart[i][item])
       }
     }
-    console.log("In your cart, you have " + items.join(", ") + ".");
+    console.log(`In your cart, you have` + items.join(", ") + `.`);
   }
 }
 function total() {
