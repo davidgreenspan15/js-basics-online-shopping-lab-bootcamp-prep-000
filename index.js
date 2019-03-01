@@ -30,13 +30,13 @@ function viewCart() {
     return myString + `and ${cart[cart.length - 1].itemName} at $${cart[cart.length - 1].itemPrice}.`
   }
 }
-function total(total) {
-  total = 0;
+function total(newTotal) {
+  var total = 0;
   
-  for(var i = 0; i < cart.length; i++) {var newtotal = 
+  for(var i = 0; i < cart.length; i++) {newTotal = 
     total += cart[i].itemPrice;
   }
-  return newtotal;
+  return newTotal;
 }
 function removeFromCart(item) {
   for (var i = 0; i <cart.length; i++) {
@@ -67,7 +67,7 @@ function placeOrder(cardNumber) {
     return "Sorry, we don't have a credit card on file for you."
   } else {
     cart = [];
-    return `Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`
+    return `Your total cost is $${total}, which will be charged to the card ${cardNumber}.`
 
 }
 }
